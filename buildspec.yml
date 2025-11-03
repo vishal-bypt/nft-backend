@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo Installing dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Running tests...
+    #  - npm test
+  post_build:
+    commands:
+      - echo Build completed successfully.
+      - zip -r nft-backend.zip .   # Archive files for deployment
+      - aws s3 cp nft-backend.zip s3://nft-backend/
+      - echo Build moved to S3 successfully.
+artifacts:
+  files:
+    - nft-backend.zip

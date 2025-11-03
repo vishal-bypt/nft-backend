@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+overwrite: true
+files:
+  - source: /
+    destination: /home/ec2-user/nft-backend
+    permissions:
+      - object: "*"
+        pattern: overwrite
+file_exists_behavior: OVERWRITE
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      timeout: 300
+      runas: ec2-user
