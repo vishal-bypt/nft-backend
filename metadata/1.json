@@ -1,0 +1,15 @@
+{
+  "name": "My First NFT",
+  "description": "This is a test NFT.",
+  "image": "ipfs://QmSo1jWD84wnX7Aa4pTgtBsFjc7uBsFfeyn4JeT4wHetdb",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    }
+  ]
+}

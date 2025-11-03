@@ -1,0 +1,56 @@
+Generating the Smart Contract Using Hardhat
+
+Smart Contract Setup
+In the Hardhat folder, there is a contracts directory containing a contract file named MyNFT.sol.
+
+Generate the metadata of contract using following command:
+node generateMetaData.js
+
+Need to follow the steps :
+1. Upload the metadata JSON file to Pinata Cloud.
+2. After the upload, you will receive a CID (Content Identifier).
+3. Create a wallet using MetaMask, where you will obtain the private key.
+4. Sign up for an account on Infura, which will provide you with an RPC link.
+
+
+Compiling the Contract
+
+To compile the contract:
+Open the shell and navigate to the root folder (hardhat).
+Run the following command:
+npx hardhat compile
+
+Deploying the Contract
+After compiling the contract, deploy it to get the contract address:
+
+Run the following command in the shell:
+npx hardhat run scripts/deploy.js --network mainnet
+
+Executing the Minting Script
+Once you have the contract address, execute the minting script to generate the NFTs:
+Navigate to the root folder (NFT-MINTING) in the shell.
+Run the command:
+npx hardhat run scripts/deploy.js --network mainnet
+
+
+Steps by Vishal Panchal
+
+npx hardhat compile 
+npx hardhat run scripts/deploy.js --network sepolia
+node mint.js
+
+MyNFT contract deployed to: 0x56046dD7516426310a26C63F4800b9f546C2D1cB
+
+Contract & Transactions 
+https://sepolia.etherscan.io/address/0x56046dd7516426310a26c63f4800b9f546c2d1cb
+
+
+
+
+Important links:
+https://app.pinata.cloud/
+https://developer.metamask.io/
+https://www.oklink.com/mumbai
+https://hardhat.org/hardhat-runner/docs/guides/project-setup
+https://github.com/alchemyplatform/Build-Your-NFT-Explorer
+https://dashboard.alchemy.com/
